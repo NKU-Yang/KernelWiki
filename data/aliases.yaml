@@ -59,6 +59,15 @@ block-scale:
   - microscaling
   - MX
 
+cutlass-cute:
+  - CuTe
+  - cute
+  - CUTLASS CuTe
+  - TiledMMA
+  - TiledMma
+  - MMA_Atom
+  - cute/mma.hpp
+
 # Architecture names
 blackwell:
   - Blackwell
@@ -72,6 +81,26 @@ sm103:
   - B300
   - GB300
   - "SM103"
+
+sm120:
+  - "SM 12.x"
+  - "SM120"
+  - "sm_120"
+  - "compute_120"
+  - "compute_120a"
+  - "compute_120f"
+  - "RTX Blackwell"
+  - "RTX PRO Blackwell"
+  - "RTX PRO 6000 Blackwell"
+  - "GeForce RTX 50"
+  - "RTX 5090"
+  - "RTX 5080"
+
+sm121:
+  - "SM121"
+  - "sm_121"
+  - "GB10"
+  - "DGX Spark"
 
 sm90:
   - Hopper

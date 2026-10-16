@@ -1,0 +1,15 @@
+PTXBench
+Copyright 2026 PTXBench contributors
+
+The GPU profiling service in fib-profile/flashinfer-bench-private is derived
+from FlashInfer Bench. Its license, notices, and third-party files are kept in
+that directory.
+
+Some prompt and reference materials use descriptions or excerpts from NVIDIA
+PTX ISA documentation. That material remains the property of NVIDIA
+Corporation and its affiliates and is subject to the terms in the PTX ISA
+notices: https://docs.nvidia.com/cuda/parallel-thread-execution/#notices
+
+Generated model outputs and training data are subject to the terms of the
+model and service providers used for a given run. Check those terms before
+training on or distributing generated artifacts.

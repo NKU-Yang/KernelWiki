@@ -1,6 +1,6 @@
 ---
 name: KernelWiki
-description: Use when the user asks about optimizing NVIDIA Blackwell (SM100, B200) or Hopper (SM90, H100) GPU kernels — tcgen05/TMEM/CLC/NVFP4/2-SM cooperative, warp specialization, FlashAttention-4, DeepGEMM, FlashMLA, MoE, grouped GEMM, CuTe-DSL/PTX/Triton on Blackwell, or wants concrete PR references from CUTLASS/SGLang/vLLM/FlashInfer/PyTorch. Do NOT use for generic CUDA Q&A that is not Blackwell/Hopper-specific, host-side framework integration, or distributed systems (DeepEP/EPLB/DualPipe).
+description: Use when the user asks about optimizing NVIDIA Blackwell (SM100, B200; SM120, RTX PRO 6000 / RTX 50) or Hopper (SM90, H100) GPU kernels — tcgen05/TMEM/CLC/NVFP4/2-SM cooperative, warp specialization, FlashAttention-4, DeepGEMM, FlashMLA, MoE, grouped GEMM, CuTe-DSL/PTX/Triton on Blackwell, or wants concrete PR references from CUTLASS/SGLang/vLLM/FlashInfer/PyTorch. Do NOT use for generic CUDA Q&A that is not Blackwell/Hopper-specific, host-side framework integration, or distributed systems (DeepEP/EPLB/DualPipe).
 argument-hint: "[natural-language-question] | [--tag foo --type kernel] | [page-id]"
 allowed-tools: "Bash Read Grep Glob"
 ---
@@ -14,6 +14,7 @@ Query a structured, cross-referenced knowledge base of GPU kernel optimization f
 Trigger this skill when the user asks about:
 
 - **Blackwell/SM100 kernel programming** — tcgen05.mma, TMEM, CLC, 2-SM cooperative, NVFP4, FP8/FP4 block scaling, PDL/GDC
+- **RTX Blackwell/SM120 kernel programming** — block-scaled `mma.sync` (NVFP4/MXFP4/MXFP8), 99 KB smem budget, `sm_120a`/`sm_120f` targets, attention without wgmma/TMEM
 - **Kernel implementations** — FlashAttention-4, DeepGEMM, FlashMLA, NSA, GatedDeltaNet, NVFP4 GEMM/GEMV, fused MoE, gated dual GEMM
 - **Performance patterns** — low SM utilization, memory-bound, register pressure, compute-bound, tail effects, pipeline stalls
 - **DSLs for Blackwell** — CuTe DSL, CUDA C++ with PTX inline, Triton on Blackwell
@@ -77,7 +78,7 @@ Auto-generated under `queries/`:
 
 - `queries/by-architecture.md` — exact SM, family-only, and validated-unknown architecture evidence
 - `queries/by-problem.md` — symptom → pattern page → candidate techniques
-- `queries/by-technique.md` — 17 techniques with architectures, confidence, reproducibility, source count
+- `queries/by-technique.md` — 18 techniques with architectures, confidence, reproducibility, source count
 - `queries/by-hardware-feature.md` — tcgen05/tmem/clc/tma/nvfp4/etc. → related wiki + PR pages
 - `queries/by-kernel-type.md` — gemm/attention/moe/mla/gated-delta-net → pages
 - `queries/by-language.md` — cute-dsl/cuda-cpp/ptx/triton → guide page + related kernels/sources

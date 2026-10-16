@@ -35,6 +35,7 @@ See [references/examples.md](references/examples.md) for 10 worked query pattern
 - [hw-2sm-cooperative](wiki/hardware/2sm-cooperative.md) — Two-SM cooperative MMA
 - [hw-nvfp4](wiki/hardware/nvfp4.md) — NVFP4 and block-scaled narrow precision
 - [hw-pdl-gdc](wiki/hardware/pdl-gdc.md) — Programmatic Dependent Launch / Grid Dependency Control
+- [hw-sm120-rtx-blackwell](wiki/hardware/sm120-rtx-blackwell.md) — RTX/GeForce Blackwell compute capability 12.0 target
 
 ## Optimization Techniques
 
@@ -48,6 +49,7 @@ See [references/examples.md](references/examples.md) for 10 worked query pattern
 - [technique-software-exp](wiki/techniques/software-exp.md) — Software-emulated exponential
 - [technique-fine-grained-quantization](wiki/techniques/fine-grained-quantization.md) - Fine-grained FP8/FP4 quantization
 - [technique-vectorized-loads](wiki/techniques/vectorized-loads.md) — Wide vectorized loads and cache policies
+- [technique-sm120-blockscaled-mma-sync](wiki/techniques/sm120-blockscaled-mma-sync.md) — SM120 NVFP4/MXFP4/MXFP8 `mma.sync` GEMM: fragments, scale lanes, TMA pipeline, verified test
 
 ## Kernel Case Studies
 
@@ -60,6 +62,8 @@ See [references/examples.md](references/examples.md) for 10 worked query pattern
 - [kernel-nvfp4-gemv](wiki/kernels/nvfp4-gemv.md) — NVFP4 batched GEMV optimization
 - [kernel-grouped-gemm](wiki/kernels/grouped-gemm.md) — Grouped GEMM for MoE
 - [kernel-fused-moe](wiki/kernels/fused-moe.md) — Fused MoE with FP8
+- [kernel-sm120-blockscaled-gemm-moe](wiki/kernels/sm120-blockscaled-gemm-moe.md) — SM120/SM12x blockscaled GEMM, b12x, and fused MoE
+- [kernel-sm120-attention](wiki/kernels/sm120-attention.md) — SM120 attention: TMA + mma.sync recipe, FP8/NVFP4 attention, decode pitfalls
 
 ## Problem → Solution Patterns
 
@@ -68,18 +72,22 @@ See [references/examples.md](references/examples.md) for 10 worked query pattern
 - [pattern-register-pressure](wiki/patterns/register-pressure.md) — Too many registers → low occupancy
 - [pattern-compute-bound](wiki/patterns/compute-bound.md) — Not reaching peak FLOPS
 - [pattern-tail-effect](wiki/patterns/tail-effect.md) — Last wave underutilizes GPU
+- [pattern-sm120-porting-failures](wiki/patterns/sm120-porting-failures.md) — SM100 assumptions or SM12x guards break RTX Blackwell kernels
 
 ## Languages & DSLs
 
 - [lang-cute-dsl](wiki/languages/cute-dsl.md) — CuTe DSL for Blackwell
 - [lang-cuda-cpp](wiki/languages/cuda-cpp.md) — CUDA C++ with PTX inline
 - [lang-ptx](wiki/languages/ptx-sm100.md) — PTX instructions for SM100
+- [lang-ptx-sm120](wiki/languages/ptx-sm120.md) — PTX/CUTLASS instruction families for SM120
+- [lang-cutlass-sm120-cute](wiki/languages/cutlass-sm120-cute.md) — CuTe API naming guardrails for SM120 MMA
 - [lang-triton](wiki/languages/triton-blackwell.md) — Triton on Blackwell
 
 ## Migration Guides
 
 - [migration-wgmma-to-tcgen05](wiki/migration/wgmma-to-tcgen05.md) — Hopper wgmma → Blackwell tcgen05
 - [migration-register-to-tmem](wiki/migration/register-to-tmem.md) — Register accumulators → TMEM
+- [migration-sm100-to-sm120](wiki/migration/sm100-to-sm120.md) — B200/SM100 assumptions → RTX Blackwell/SM120 guardrails
 
 ## Source Repositories
 
@@ -95,3 +103,13 @@ See [references/examples.md](references/examples.md) for 10 worked query pattern
 
 - [GPU Mode NVFP4 Hackathon](sources/contests/gpu-mode-nvfp4/) — 4 NVFP4 kernel challenges on B200
 - [FlashInfer MLSys 2026](sources/contests/flashinfer-mlsys26/) — MoE, Sparse Attention, GatedDeltaNet
+
+## PTXBench Structural Docs
+
+Verbatim PTXBench (zhang677/PTXBench @ 163e3734) `structural_doc` prompt fragments, imported as `community-note` source pages under `sources/blogs/ptxbench/` (40 pages) with the helper headers, LICENSE and NOTICE in `artifacts/blogs/ptxbench-structural-doc/code/`. Task rules inside them (autotune bans, fixed shapes) were PTXBench task constraints, not general guidance.
+
+- Hardware parameters: `blog-ptxbench-arch-param-b200`, `blog-ptxbench-arch-param-h100`
+- PTX excerpts: `blog-ptxbench-ptx-knowledge-sm100-plus`, `blog-ptxbench-ptx-knowledge-sm90-plus`, `blog-ptxbench-debug-hints-sm90`
+- Triton contracts: `blog-ptxbench-triton-knowledge-sm100-plus`, `blog-ptxbench-triton-knowledge-sm90-plus`
+- Optimization patterns: FA3/FA4 forward/backward, persistent kernels, warp specialization, TMA store, cluster multicast, L2 swizzle (`python3 scripts/query.py ptxbench --compact`)
+- Helper headers with PTX usage notes: `blog-ptxbench-header-{barrier,simt,tma-bf16,tma-bf16-sm100,umma-bf16,wgmma-bf16}`

@@ -487,6 +487,28 @@ Source-PR pages whose validated evidence review found no family-level or exact a
 | [Writing High-Performance Matrix Multiplication Kernels for Blackwell with JAX Pallas](../sources/blogs/jax-pallas-blackwell-matmul.md) | `sources/blogs/jax-pallas-blackwell-matmul.md` |
 | [Modular: Matrix Multiplication on Blackwell, Part 3](../sources/blogs/modular-blackwell-matmul.md) | `sources/blogs/modular-blackwell-matmul.md` |
 | [NVIDIA Developer Code Samples](../sources/blogs/nvidia-code-samples.md) | `sources/blogs/nvidia-code-samples.md` |
+| [PTXBench: B200 (SM100) hardware parameters](../sources/blogs/ptxbench/arch-param-b200.md) | `sources/blogs/ptxbench/arch-param-b200.md` |
+| [PTXBench: Optimization Pattern: Single-Owner Attention Backward in Standard Triton](../sources/blogs/ptxbench/attention-backward-1cta-blackwell-triton.md) | `sources/blogs/ptxbench/attention-backward-1cta-blackwell-triton.md` |
+| [PTXBench: Optimization Pattern: Split Output Ownership for Standard-Triton Attention Backward](../sources/blogs/ptxbench/attention-backward-split-blackwell-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/attention-backward-split-blackwell-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: Split Output Ownership for Standard-Triton Attention Backward](../sources/blogs/ptxbench/attention-backward-split-blackwell-triton.md) | `sources/blogs/ptxbench/attention-backward-split-blackwell-triton.md` |
+| [PTXBench: Optimization Pattern: Streaming Attention Forward in Standard Triton on Blackwell](../sources/blogs/ptxbench/attention-forward-blackwell-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/attention-forward-blackwell-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: Streaming Attention Forward in Standard Triton on Blackwell](../sources/blogs/ptxbench/attention-forward-blackwell-triton.md) | `sources/blogs/ptxbench/attention-forward-blackwell-triton.md` |
+| [PTXBench: Optimization Pattern: Standard-Triton Non-GEMM Attention Forward Refinements](../sources/blogs/ptxbench/attention-forward-nongemm-blackwell-triton.md) | `sources/blogs/ptxbench/attention-forward-nongemm-blackwell-triton.md` |
+| [PTXBench: Optimization Pattern: Cluster Multicast Load](../sources/blogs/ptxbench/cluster-multicast-load.md) | `sources/blogs/ptxbench/cluster-multicast-load.md` |
+| [PTXBench: Attention backward pass (FA-4 for Blackwell)](../sources/blogs/ptxbench/fa4-tdblog-bwd-1cta.md) | `sources/blogs/ptxbench/fa4-tdblog-bwd-1cta.md` |
+| [PTXBench: Attention backward pass (FA-4 for Blackwell)](../sources/blogs/ptxbench/fa4-tdblog-bwd.md) | `sources/blogs/ptxbench/fa4-tdblog-bwd.md` |
+| [PTXBench: Attention forward pass (FA-4 for Blackwell)](../sources/blogs/ptxbench/fa4-tdblog-fwd-wo-nongemm.md) | `sources/blogs/ptxbench/fa4-tdblog-fwd-wo-nongemm.md` |
+| [PTXBench: Attention forward pass (FA-4 for Blackwell)](../sources/blogs/ptxbench/fa4-tdblog-fwd.md) | `sources/blogs/ptxbench/fa4-tdblog-fwd.md` |
+| [PTXBench: simt.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-simt.md) | `sources/blogs/ptxbench/header-simt.md` |
+| [PTXBench: tma_bf16_sm100.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-tma-bf16-sm100.md) | `sources/blogs/ptxbench/header-tma-bf16-sm100.md` |
+| [PTXBench: umma_bf16.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-umma-bf16.md) | `sources/blogs/ptxbench/header-umma-bf16.md` |
+| [PTXBench: Optimization Pattern: L2-Aware Grouped Tile Ordering in Triton](../sources/blogs/ptxbench/l2-swizzle-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/l2-swizzle-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: L2-Aware Grouped Tile Ordering in Triton](../sources/blogs/ptxbench/l2-swizzle-triton.md) | `sources/blogs/ptxbench/l2-swizzle-triton.md` |
+| [PTXBench: Optimization Pattern: Persistent Device-Descriptor GEMM on Blackwell Triton](../sources/blogs/ptxbench/persistent-kernel-blackwell-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/persistent-kernel-blackwell-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: Persistent Device-Descriptor GEMM on Blackwell Triton](../sources/blogs/ptxbench/persistent-kernel-blackwell-triton.md) | `sources/blogs/ptxbench/persistent-kernel-blackwell-triton.md` |
+| [PTXBench: PTX knowledge for SM100+ (tcgen05, TMEM, TMA excerpts)](../sources/blogs/ptxbench/ptx-knowledge-sm100-plus.md) | `sources/blogs/ptxbench/ptx-knowledge-sm100-plus.md` |
+| [PTXBench: Triton Contract for NVIDIA Blackwell B200 (SM100/SM100a)](../sources/blogs/ptxbench/triton-knowledge-sm100-plus-autotune-banned-v1.md) | `sources/blogs/ptxbench/triton-knowledge-sm100-plus-autotune-banned-v1.md` |
+| [PTXBench: Triton Contract for NVIDIA Blackwell B200 (SM100/SM100a)](../sources/blogs/ptxbench/triton-knowledge-sm100-plus.md) | `sources/blogs/ptxbench/triton-knowledge-sm100-plus.md` |
 | [NVIDIA Qwen3-Next Architecture Announcement](../sources/blogs/qwen3-next-architecture.md) | `sources/blogs/qwen3-next-architecture.md` |
 | [NVFP4 GEMV](../sources/blogs/simon-nvfp4-gemv.md) | `sources/blogs/simon-nvfp4-gemv.md` |
 | [simveit effective_transpose](../sources/blogs/simveit-effective-transpose.md) | `sources/blogs/simveit-effective-transpose.md` |
@@ -1033,11 +1055,58 @@ Source-PR pages whose validated evidence review found no family-level or exact a
 
 | Page | Path |
 |------|------|
+| [Colfax Research: NVFP4 Blockscaled GEMM on NVIDIA RTX Pro Blackwell GPUs (SM12x) with CuTe DSL](../sources/blogs/colfax-nvfp4-blockscaled-gemm-sm120.md) | `sources/blogs/colfax-nvfp4-blockscaled-gemm-sm120.md` |
+| [Writing Speed-of-Light Flash Attention for 5090 in CUDA C++ (plus FlashAttention status on SM120)](../sources/blogs/gau-nernst-flash-attention-5090.md) | `sources/blogs/gau-nernst-flash-attention-5090.md` |
+| [gau-nernst: realistic speed-of-light and MMA-variant throughput on RTX 5090 / RTX PRO 6000 (gn-kernels, NVRTC matmul)](../sources/blogs/gau-nernst-sm120-mma-throughput.md) | `sources/blogs/gau-nernst-sm120-mma-throughput.md` |
+| [GB10 / DGX Spark (SM121) community measurements: FP4 peak, padded vs packed NVFP4, custom FP4 GEMM, FP8-vs-NVFP4 serving trap](../sources/blogs/gb10-dgx-spark-sm121-measurements.md) | `sources/blogs/gb10-dgx-spark-sm121-measurements.md` |
+| [llama.cpp CUDA backend on SM120/SM121: native NVFP4/MXFP4 block-scaled MMQ, PDL and decode tuning (May-Oct 2026)](../sources/blogs/llama-cpp-sm120-fp4-mma-2026h2.md) | `sources/blogs/llama-cpp-sm120-fp4-mma-2026h2.md` |
+| [SM120/SM121 dense attention kernels: FA4 CuTe, FlashInfer fmha_v2/XQA/NVFP4, TRT-LLM, vLLM, SGLang (May-Oct 2026)](../sources/blogs/sm120-attention-kernels-2026h2.md) | `sources/blogs/sm120-attention-kernels-2026h2.md` |
+| [SM120 block-scaled FP4/FP6/FP8 mma.sync inline-PTX wrappers (CUTLASS, llama.cpp)](../sources/blogs/sm120-blockscaled-mma-ptx-wrappers.md) | `sources/blogs/sm120-blockscaled-mma-ptx-wrappers.md` |
+| [SM120 compile targets and guards: sm_120a vs sm_120f, __CUDA_ARCH_FEAT_SM120_ALL, CUTLASS/vLLM/FlashInfer flags](../sources/blogs/sm120-compile-flags-arch-macros.md) | `sources/blogs/sm120-compile-flags-arch-macros.md` |
+| [SM120/SM121 dense FP4/FP8/W4A16 GEMM backends: CUTLASS, FlashInfer b12x/CuTe DSL, vLLM, SGLang (May-Oct 2026)](../sources/blogs/sm120-fp4-fp8-gemm-backends-2026h2.md) | `sources/blogs/sm120-fp4-fp8-gemm-backends-2026h2.md` |
+| [SM120 fused layer kernels: quantized MLP/pre-attention fusions, GDN delta-rule, MSA, comm (Jun-Oct 2026)](../sources/blogs/sm120-fused-layer-kernels-2026h2.md) | `sources/blogs/sm120-fused-layer-kernels-2026h2.md` |
+| [SM120 ldmatrix b4x16_p64 / b6x16_p32 and FP4 shared-memory layouts in CUTLASS](../sources/blogs/sm120-ldmatrix-fp4-fp6-smem-layouts.md) | `sources/blogs/sm120-ldmatrix-fp4-fp6-smem-layouts.md` |
+| [SM120 memory-system and SIMT/HGEMM measurements: Chips and Cheese (RTX PRO 6000), CloudRift (RTX 5090 cuBLAS SGEMM bug), cuda-ops-5090d](../sources/blogs/sm120-memory-system-and-simt-gemm-measurements.md) | `sources/blogs/sm120-memory-system-and-simt-gemm-measurements.md` |
+| [SM120 mma.m16n8k64 FP4 fragment layout and scale-factor lane/byte mapping](../sources/blogs/sm120-mma-m16n8k64-fragment-and-scale-register-mapping.md) | `sources/blogs/sm120-mma-m16n8k64-fragment-and-scale-register-mapping.md` |
+| [SM120/SM121 fused-MoE kernels in FlashInfer b12x, vLLM and TensorRT-LLM (May-Oct 2026)](../sources/blogs/sm120-moe-kernels-2026h2.md) | `sources/blogs/sm120-moe-kernels-2026h2.md` |
+| [SM120 NVFP4/MXFP4 quantization kernels: cvt.rn.satfinite.e2m1x2.f32 and scale computation](../sources/blogs/sm120-nvfp4-quantization-kernels.md) | `sources/blogs/sm120-nvfp4-quantization-kernels.md` |
+| [SM120 NVFP4/MXFP scale-factor layouts: 128x4 swizzled global layout and smem/register staging](../sources/blogs/sm120-scale-factor-layouts-nvfp4-mxfp.md) | `sources/blogs/sm120-scale-factor-layouts-nvfp4-mxfp.md` |
+| [SM120/SM121 sparse MLA, DSA indexer and DeepGEMM for DeepSeek-V4 / V3.2 / GLM (Jun-Oct 2026)](../sources/blogs/sm120-sparse-mla-dsv4-2026h2.md) | `sources/blogs/sm120-sparse-mla-dsv4-2026h2.md` |
+| [SM120 TMA loads and mbarrier expect-tx pipelines in CUTLASS (no multicast, shared::cta)](../sources/blogs/sm120-tma-mbarrier-pipeline.md) | `sources/blogs/sm120-tma-mbarrier-pipeline.md` |
+| [SM120 warp-specialized blockscaled GEMM: warp roles, setmaxnreg budgets, mainloop structure](../sources/blogs/sm120-warp-specialized-gemm-register-budget.md) | `sources/blogs/sm120-warp-specialized-gemm-register-budget.md` |
+| [SM121 (GB10 / DGX Spark) kernel enablement and tuning lessons from upstream PRs (May-Oct 2026)](../sources/blogs/sm121-dgx-spark-2026h2.md) | `sources/blogs/sm121-dgx-spark-2026h2.md` |
+| [Triton and TileLang on SM120/SM121: dot_scaled, block-scaled MMA lowering and backend fixes (May-Oct 2026)](../sources/blogs/triton-tilelang-sm120-2026h2.md) | `sources/blogs/triton-tilelang-sm120-2026h2.md` |
+| [Accurate Models of NVIDIA Tensor Cores (arXiv 2512.07004): RTX PRO 6000 (SM120) numerics and SASS mapping](../sources/docs/accurate-models-tensor-cores-rtx-pro-6000.md) | `sources/docs/accurate-models-tensor-cores-rtx-pro-6000.md` |
+| [Dissecting the NVIDIA Blackwell Architecture with Microbenchmarks](../sources/docs/blackwell-sm120-microbenchmarking-rtx5080.md) | `sources/docs/blackwell-sm120-microbenchmarking-rtx5080.md` |
+| [cuBLAS/cuBLASLt on SM120/SM121: block-scaled FP4/FP8 matmul rules, scale modes, SF layout, release-note history (CUDA 12.8-13.4)](../sources/docs/cublaslt-sm120-blockscaled-matmul.md) | `sources/docs/cublaslt-sm120-blockscaled-matmul.md` |
+| [CUDA Math API: cuda_fp4.h / cuda_fp6.h / cuda_fp8.h types and conversion intrinsics for SM120 quantization](../sources/docs/cuda-math-fp4-fp6-fp8-intrinsics.md) | `sources/docs/cuda-math-fp4-fp6-fp8-intrinsics.md` |
+| [CUDA Programming Guide 13.4 + Blackwell Tuning/Compatibility Guides: compute capability 12.x limits](../sources/docs/cuda-programming-guide-cc12.md) | `sources/docs/cuda-programming-guide-cc12.md` |
 | [CUDA Programming Guide: Programmatic Dependent Launch](../sources/docs/cuda-programming-guide-pdl.md) | `sources/docs/cuda-programming-guide-pdl.md` |
+| [CUDA Toolkit 12.8-13.4 release notes: SM120/SM121 support, family targets, drivers, known issues](../sources/docs/cuda-toolkit-release-notes-sm120-family.md) | `sources/docs/cuda-toolkit-release-notes-sm120-family.md` |
+| [cuDNN 9.x and cuDNN Frontend on SM120/SM121: SDPA (flash attention) support matrix, block-scaled matmul, known issues](../sources/docs/cudnn-sm120-sdpa-matmul-support.md) | `sources/docs/cudnn-sm120-sdpa-matmul-support.md` |
+| [CuTe DSL (Python) SM120 Blackwell GeForce examples: block-scaled GEMM (cooperative/pingpong), dense GEMM, implicit-GEMM conv](../sources/docs/cute-dsl-sm120-geforce-examples.md) | `sources/docs/cute-dsl-sm120-geforce-examples.md` |
+| [CuTe SM120 MMA atoms (SM120_16x8x32_TN, SM120_16x8x64_TN_VS), PTX strings, FP4 shift, and Sm1xx block-scale factor layout](../sources/docs/cute-sm120-mma-atoms-and-scale-factor-layout.md) | `sources/docs/cute-sm120-mma-atoms-and-scale-factor-layout.md` |
 | [cuTile Python Documentation](../sources/docs/cutile-python-dsl.md) | `sources/docs/cutile-python-dsl.md` |
+| [CUTLASS 4.5.x-4.8.0 release notes: SM120/SM121 (Blackwell GeForce, RTX PRO 6000, DGX Spark) items](../sources/docs/cutlass-4-5-to-4-8-sm120-release-notes.md) | `sources/docs/cutlass-4-5-to-4-8-sm120-release-notes.md` |
 | [CUTLASS CuTe DSL Documentation](../sources/docs/cutlass-cute-dsl.md) | `sources/docs/cutlass-cute-dsl.md` |
+| [CUTLASS SM120 collective builders: dispatch policies, warp layouts, smem budget, stage counts, epilogue tiles](../sources/docs/cutlass-sm120-collective-builder-internals.md) | `sources/docs/cutlass-sm120-collective-builder-internals.md` |
+| [CUTLASS SM120 GeForce GEMM examples 79a-d, 80a-b, 87a-c and valid tile/dispatch tables](../sources/docs/cutlass-sm120-geforce-gemm-examples-79-80-87.md) | `sources/docs/cutlass-sm120-geforce-gemm-examples-79-80-87.md` |
+| [Nsight Compute 2026.3: SM120 (GB20x) support and tensor-pipe metrics for mma.sync kernels](../sources/docs/nsight-compute-sm120-tensor-metrics.md) | `sources/docs/nsight-compute-sm120-tensor-metrics.md` |
+| [NVIDIA Blackwell Tuning Guide Notes for Compute Capability 12.0](../sources/docs/nvidia-blackwell-tuning-guide-sm120.md) | `sources/docs/nvidia-blackwell-tuning-guide-sm120.md` |
 | [NVIDIA Blackwell Tuning Guide](../sources/docs/nvidia-blackwell-tuning-guide.md) | `sources/docs/nvidia-blackwell-tuning-guide.md` |
+| [NVIDIA CUDA GPUs: Compute Capability 12.0 Devices](../sources/docs/nvidia-cuda-gpus-sm120.md) | `sources/docs/nvidia-cuda-gpus-sm120.md` |
+| [CUDA Programming Guide: Compute Capability 12.x Feature Targets](../sources/docs/nvidia-cuda-programming-guide-sm120.md) | `sources/docs/nvidia-cuda-programming-guide-sm120.md` |
+| [CUTLASS Blackwell SM120 GEMM Functionality](../sources/docs/nvidia-cutlass-sm120.md) | `sources/docs/nvidia-cutlass-sm120.md` |
 | [PTX ISA Fifth-Generation Tensor Core and CLC Reference](../sources/docs/nvidia-ptx-isa-sm100.md) | `sources/docs/nvidia-ptx-isa-sm100.md` |
+| [NVIDIA PTX ISA 9.x: SM120 Targets and Narrow-Precision Instructions](../sources/docs/nvidia-ptx-isa-sm120.md) | `sources/docs/nvidia-ptx-isa-sm120.md` |
+| [NVIDIA RTX Blackwell GPU Architecture whitepapers (GeForce v1.1 and RTX PRO v1.1): GB202/GB203 tensor-core and memory specs](../sources/docs/nvidia-rtx-blackwell-whitepapers-gb202.md) | `sources/docs/nvidia-rtx-blackwell-whitepapers-gb202.md` |
+| [NVIDIA RTX PRO 6000 Blackwell Architecture and Product Specifications](../sources/docs/nvidia-rtx-pro-6000-blackwell-specs.md) | `sources/docs/nvidia-rtx-pro-6000-blackwell-specs.md` |
+| [TensorRT-RTX Support Matrix: SM 12.x Blackwell GeForce](../sources/docs/nvidia-tensorrt-rtx-sm12.md) | `sources/docs/nvidia-tensorrt-rtx-sm12.md` |
+| [PTX ISA 9.4: ldmatrix/stmatrix sub-byte variants and FP8/FP6/FP4/UE8M0 cvt on SM120](../sources/docs/ptx-isa-sm120-ldmatrix-stmatrix-cvt.md) | `sources/docs/ptx-isa-sm120-ldmatrix-stmatrix-cvt.md` |
+| [PTX ISA 9.4: warp-level mma.sync with FP8/FP6/FP4 and block scaling on SM120](../sources/docs/ptx-isa-sm120-mma-blockscale.md) | `sources/docs/ptx-isa-sm120-mma-blockscale.md` |
+| [PTX ISA 9.4: structured-sparse mma.sp::ordered_metadata with FP8/FP6/FP4 and block scaling on SM120](../sources/docs/ptx-isa-sm120-sparse-mma.md) | `sources/docs/ptx-isa-sm120-sparse-mma.md` |
+| [PTX ISA 9.4: SM120 targets (sm_120/120a/120f, sm_121), TMA, mbarrier, cluster and what is NOT available](../sources/docs/ptx-isa-sm120-targets-tma-async.md) | `sources/docs/ptx-isa-sm120-targets-tma-async.md` |
+| [FP4 microscaling kernels on RTX 5090: SageAttention3 (arXiv 2505.11594) and MicroMix (arXiv 2508.02343, ICLR 2026)](../sources/docs/sageattention3-micromix-fp4-rtx5090.md) | `sources/docs/sageattention3-micromix-fp4-rtx5090.md` |
 | [[https://nvbugs/5854860][fix] Fix cutedsl argmax on sm120](../sources/prs/TensorRT-LLM/PR-11181.md) | `sources/prs/TensorRT-LLM/PR-11181.md` |
 | [[None][feat] Fuse FP8 1x128 quantize + UE8M0 scale pack on SM100](../sources/prs/TensorRT-LLM/PR-13628.md) | `sources/prs/TensorRT-LLM/PR-13628.md` |
 | [feat: Add w4a8_mxfp4_fp8 quantization recipe.](../sources/prs/TensorRT-LLM/PR-4867.md) | `sources/prs/TensorRT-LLM/PR-4867.md` |
@@ -1124,6 +1193,13 @@ Source-PR pages whose validated evidence review found no family-level or exact a
 | [[Perf] Batch invariance with Cutlass fp8 support, 28.9% E2E latency improvement](../sources/prs/vllm/PR-40408.md) | `sources/prs/vllm/PR-40408.md` |
 | [Cluster Launch Control (CLC)](../wiki/hardware/clc.md) | `wiki/hardware/clc.md` |
 | [Programmatic Dependent Launch / Grid Dependency Control](../wiki/hardware/pdl-gdc.md) | `wiki/hardware/pdl-gdc.md` |
+| [SM120 RTX Blackwell - GeForce and Workstation Blackwell](../wiki/hardware/sm120-rtx-blackwell.md) | `wiki/hardware/sm120-rtx-blackwell.md` |
+| [SM120 Attention Kernels (FlashAttention, FP8/NVFP4 Attention, Decode)](../wiki/kernels/sm120-attention.md) | `wiki/kernels/sm120-attention.md` |
+| [SM120 Blockscaled GEMM and MoE](../wiki/kernels/sm120-blockscaled-gemm-moe.md) | `wiki/kernels/sm120-blockscaled-gemm-moe.md` |
+| [CUTLASS CuTe SM120 MMA API Notes](../wiki/languages/cutlass-sm120-cute.md) | `wiki/languages/cutlass-sm120-cute.md` |
+| [PTX and CUTLASS Instruction Families for SM120](../wiki/languages/ptx-sm120.md) | `wiki/languages/ptx-sm120.md` |
+| [SM120 Porting Failures](../wiki/patterns/sm120-porting-failures.md) | `wiki/patterns/sm120-porting-failures.md` |
+| [SM120 Block-Scaled mma.sync GEMM Programming (NVFP4 / MXFP4 / MXFP8)](../wiki/techniques/sm120-blockscaled-mma-sync.md) | `wiki/techniques/sm120-blockscaled-mma-sync.md` |
 
 ### `sm120a`
 
@@ -1306,6 +1382,28 @@ Source-PR pages whose validated evidence review found no family-level or exact a
 | [DeepGEMM tensor-core kernel library](../sources/blogs/deepgemm.md) | `sources/blogs/deepgemm.md` |
 | [FlashMLA upstream README](../sources/blogs/flashmla.md) | `sources/blogs/flashmla.md` |
 | [NVIDIA Developer Code Samples](../sources/blogs/nvidia-code-samples.md) | `sources/blogs/nvidia-code-samples.md` |
+| [PTXBench: H100 (SM90) hardware parameters](../sources/blogs/ptxbench/arch-param-h100.md) | `sources/blogs/ptxbench/arch-param-h100.md` |
+| [PTXBench: Optimization Pattern: Cluster Multicast Load](../sources/blogs/ptxbench/cluster-multicast-load.md) | `sources/blogs/ptxbench/cluster-multicast-load.md` |
+| [PTXBench: Common Causes of Incorrect Results](../sources/blogs/ptxbench/debug-hints-sm90.md) | `sources/blogs/ptxbench/debug-hints-sm90.md` |
+| [PTXBench: Optimization pattern: Producer-Consumer asynchrony through warp-specialization and pingpong scheduling](../sources/blogs/ptxbench/fa3-bwd-2ker-fwd-v0.md) | `sources/blogs/ptxbench/fa3-bwd-2ker-fwd-v0.md` |
+| [PTXBench: Optimization pattern: Asynchrony Through Warp Specialization for the Backward Pass](../sources/blogs/ptxbench/fa3-bwd-2ker.md) | `sources/blogs/ptxbench/fa3-bwd-2ker.md` |
+| [PTXBench: Optimization pattern: Producer-Consumer asynchrony through warp-specialization and pingpong scheduling](../sources/blogs/ptxbench/fa3-fwd-v0.md) | `sources/blogs/ptxbench/fa3-fwd-v0.md` |
+| [PTXBench: Optimization pattern: Producer-Consumer asynchrony through warp-specialization and pingpong scheduling](../sources/blogs/ptxbench/fa3-fwd-v1.md) | `sources/blogs/ptxbench/fa3-fwd-v1.md` |
+| [PTXBench: barrier.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-barrier.md) | `sources/blogs/ptxbench/header-barrier.md` |
+| [PTXBench: simt.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-simt.md) | `sources/blogs/ptxbench/header-simt.md` |
+| [PTXBench: tma_bf16.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-tma-bf16.md) | `sources/blogs/ptxbench/header-tma-bf16.md` |
+| [PTXBench: wgmma_bf16.h helper header with PTX usage notes](../sources/blogs/ptxbench/header-wgmma-bf16.md) | `sources/blogs/ptxbench/header-wgmma-bf16.md` |
+| [PTXBench: Optimization Pattern: L2-Aware Grouped Tile Ordering in Triton](../sources/blogs/ptxbench/l2-swizzle-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/l2-swizzle-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: L2-Aware Grouped Tile Ordering in Triton](../sources/blogs/ptxbench/l2-swizzle-triton.md) | `sources/blogs/ptxbench/l2-swizzle-triton.md` |
+| [PTXBench: Optimization Pattern: Persistent Tile Scheduling in Triton](../sources/blogs/ptxbench/persistent-kernel-triton-autotune-banned-v1.md) | `sources/blogs/ptxbench/persistent-kernel-triton-autotune-banned-v1.md` |
+| [PTXBench: Optimization Pattern: Persistent Tile Scheduling in Triton](../sources/blogs/ptxbench/persistent-kernel-triton.md) | `sources/blogs/ptxbench/persistent-kernel-triton.md` |
+| [PTXBench: Optimization Pattern: Persistent Kernel](../sources/blogs/ptxbench/persistent-kernel.md) | `sources/blogs/ptxbench/persistent-kernel.md` |
+| [PTXBench: PTX knowledge for SM90+ (TMA, mbarrier, wgmma excerpts)](../sources/blogs/ptxbench/ptx-knowledge-sm90-plus.md) | `sources/blogs/ptxbench/ptx-knowledge-sm90-plus.md` |
+| [PTXBench: Kernel contract checklist for TMA/WGMMA attention (Qwen3.6-27B MHA task patch)](../sources/blogs/ptxbench/qwen36-27b-mha-patch.md) | `sources/blogs/ptxbench/qwen36-27b-mha-patch.md` |
+| [PTXBench: Optimization Pattern: TMA Store](../sources/blogs/ptxbench/tma-store.md) | `sources/blogs/ptxbench/tma-store.md` |
+| [PTXBench: Triton Contract for NVIDIA Hopper (SM90/SM90a)](../sources/blogs/ptxbench/triton-knowledge-sm90-plus-autotune-banned-v1.md) | `sources/blogs/ptxbench/triton-knowledge-sm90-plus-autotune-banned-v1.md` |
+| [PTXBench: Triton Contract for NVIDIA Hopper (SM90/SM90a)](../sources/blogs/ptxbench/triton-knowledge-sm90-plus.md) | `sources/blogs/ptxbench/triton-knowledge-sm90-plus.md` |
+| [PTXBench: Optimization Pattern: Warp Specialization](../sources/blogs/ptxbench/warp-specialization.md) | `sources/blogs/ptxbench/warp-specialization.md` |
 | [NVIDIA Qwen3-Next Architecture Announcement](../sources/blogs/qwen3-next-architecture.md) | `sources/blogs/qwen3-next-architecture.md` |
 | [simveit effective_transpose](../sources/blogs/simveit-effective-transpose.md) | `sources/blogs/simveit-effective-transpose.md` |
 | [simveit load_and_store](../sources/blogs/simveit-load-and-store.md) | `sources/blogs/simveit-load-and-store.md` |

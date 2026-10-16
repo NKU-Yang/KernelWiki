@@ -15,9 +15,9 @@ The initial size was 24.72 MiB / 25 MiB and core manifests contained 252 PRs.
 
 | Command | Exit | Verdict | Exact result |
 | --- | ---: | --- | --- |
-| `python3 scripts/validate.py` | 0 | pass | 1,041 files; 989 source IDs; 37 verbatim bundles; 14 candidate ledgers; all valid |
+| `python3 scripts/validate.py` | 0 | pass | 1,136 files; 1,076 source IDs; 38 verbatim bundles; 14 candidate ledgers; all valid (rerun 2026-10-15 after the SM120 + PTXBench import) |
 | `python3 scripts/check_version_freshness.py` | 0 | pass | 0 warnings; 7 informational old-release messages |
-| `python3 scripts/verify_verbatim.py --strict` | 0 | pass | 37 bundles; all verbatim/upstream-patch assets match upstream |
+| `python3 scripts/verify_verbatim.py --strict` | 0 | pass | 38 bundles: 37 matched upstream under `--strict`; the 38th bundle (`artifacts/blogs/ptxbench-structural-doc/code`, added 2026-10-15) was byte-compared against raw.githubusercontent.com at its pinned SHA (12/12 files identical) because `gh` was unavailable |
 | `python3 scripts/check_dod_fixtures.py` | 0 | pass | contract v3; exact five-id roster; 3 active and 2 retired contracts; all assets/tombstones valid |
 | `python3 scripts/verify_pr_architecture_upstream.py` | 0 | pass | 19 deterministic high-risk PRs re-derived live, including all 6 capped PRs, real-device/host-only `.cu` controls, and canonical receipt hashing |
 | `python3 scripts/verify_core_prs.py` | 0 | pass | all 3 manifests byte-consistent; checksum `cde1aab41b70…`; 110 core PRs |

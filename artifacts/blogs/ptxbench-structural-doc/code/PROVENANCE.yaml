@@ -1,0 +1,69 @@
+origin_url: https://github.com/zhang677/PTXBench
+upstream_repo: zhang677/PTXBench
+upstream_sha: 163e3734eed4ae66af8cfb7ac55976178d576603
+license: Apache-2.0 (upstream LICENSE and NOTICE included; NVIDIA PTX ISA excerpts subject to https://docs.nvidia.com/cuda/parallel-thread-execution/#notices)
+retrieved_at: '2026-10-15'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: manual import from KAI-Pikachu knowledge/corpora/PTXBench
+files:
+- local_path: headers/barrier.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/barrier.h
+  sha256: cdcbd8158a341bb2e74c31cb731e6d54cd4bbe33da52fe0d0bd380aefdda4ea0
+- local_path: headers/simt.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/simt.h
+  sha256: e27af4da42ba50bd1f5c6e928d0eadb649a65f40ed88bac716ad6b4c2cd6b1fe
+- local_path: headers/tma_bf16.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/tma_bf16.h
+  sha256: 5c9a5164c722b3f33bb0b4db55bebe0e810874a65289e80395d49fcb8558e1a8
+- local_path: headers/tma_bf16_sm100.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/tma_bf16_sm100.h
+  sha256: 7500d21a626e010f718fdb3f2586b0f38115da9b61cfdcdeaab101c472b31ec4
+- local_path: headers/umma_bf16.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/umma_bf16.h
+  sha256: c7c042484d87ae29844d49b8c18df0b86f104ddc96de7ffd812e8a8a1f453dd0
+- local_path: headers/wgmma_bf16.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers/wgmma_bf16.h
+  sha256: c63726357bc3ab7570976d2725990d6257871e7251ab826d5e9aeea561b92d82
+- local_path: headers_wo_doc/barrier.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers_wo_doc/barrier.h
+  sha256: 54034bce2de09e53441cc90127053235699ed8c46da69c70835a37d979071a3f
+- local_path: headers_wo_doc/simt.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers_wo_doc/simt.h
+  sha256: bd7367a56960d6380c96d57c6ce84341779c7ac4347c35edd8257ec15387f67e
+- local_path: headers_wo_doc/tma_bf16.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers_wo_doc/tma_bf16.h
+  sha256: 9f002ccc526b3330188ce36c0c6c3aafc456084f09c2c2b30fc707bbb97b622b
+- local_path: headers_wo_doc/wgmma_bf16.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: multiturn/prompts/fragments/structural_doc/headers_wo_doc/wgmma_bf16.h
+  sha256: 33e96412caa266a356ffd31b2ccdcc20e62b0512aee3d31ddc76ef49c4df25dd
+- local_path: LICENSE
+  role: upstream-file
+  mode: verbatim
+  upstream_path: LICENSE
+  sha256: c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
+- local_path: NOTICE
+  role: upstream-file
+  mode: verbatim
+  upstream_path: NOTICE
+  sha256: 238b4a12a3e81e3ef06f7ed45010d5e1782f6ae574bf9d873c4e7de715012570

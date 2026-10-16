@@ -7,7 +7,8 @@ Exit    : 0 (documented contract: 0 = full-corpus upstream byte-match; 1 = --str
 The environment, scope, and stdout below are preserved as the dated historical
 capture, not presented as the current corpus size. The post-Round-24 worktree
 has 37 provenance bundles; strict verification again exits 0 and reports all
-37 as matching upstream.
+37 as matching upstream. After the 2026-10-15 SM120 + PTXBench import the worktree has 38 bundles;
+the 38th bundle (`artifacts/blogs/ptxbench-structural-doc/code`, added 2026-10-15) was byte-compared against raw.githubusercontent.com at its pinned SHA (12/12 files identical) because `gh` was unavailable.
 
 ## Environment
 

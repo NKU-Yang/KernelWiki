@@ -26,6 +26,20 @@ All page IDs below resolve via `get_page.py <id>`. All paths are relative to the
 
 ---
 
+## Hardware Features (SM120)
+
+| Feature | Page ID | Path | Notes |
+|---|---|---|---|
+| SM120 RTX Blackwell | `hw-sm120-rtx-blackwell` | `wiki/hardware/sm120-rtx-blackwell.md` | RTX PRO 6000 / GeForce RTX 50 class Blackwell; distinct from B200/SM100. |
+| PTX/CUTLASS SM120 MMA | `lang-ptx-sm120` | `wiki/languages/ptx-sm120.md` | SM120 dense `mma.sync` and sparse `mma.sp::ordered_metadata` families for FP4/FP6/FP8 GEMM. |
+| CUTLASS CuTe SM120 API | `lang-cutlass-sm120-cute` | `wiki/languages/cutlass-sm120-cute.md` | Actual CuTe header/type names for SM120 MMA; use when repairs hit guessed `MMA_Atom`/`TiledMma` APIs. |
+| SM120 blockscaled GEMM/MoE | `kernel-sm120-blockscaled-gemm-moe` | `wiki/kernels/sm120-blockscaled-gemm-moe.md` | SM120/SM12x FP4, FP8, NVFP4, b12x, fused MoE, and small-M decode GEMM routing patterns. |
+| SM120 porting failures | `pattern-sm120-porting-failures` | `wiki/patterns/sm120-porting-failures.md` | Failure checklist for SM100 assumptions, shared-memory overuse, arch suffix stripping, and blockscale shape guards. |
+| SM120 block-scaled mma.sync | `technique-sm120-blockscaled-mma-sync` | `wiki/techniques/sm120-blockscaled-mma-sync.md` | NVFP4/MXFP4/MXFP8 `mma.sync` fragments, scale-factor lanes, compile targets, TMA pipeline; hardware-verified test. |
+| SM120 attention | `kernel-sm120-attention` | `wiki/kernels/sm120-attention.md` | TMA + `mma.sync` attention recipe, FP8/NVFP4 attention, decode and mask pitfalls on RTX Blackwell. |
+
+---
+
 ## Optimization Techniques
 
 | Technique | Page ID | When to use |
@@ -58,6 +72,7 @@ All page IDs below resolve via `get_page.py <id>`. All paths are relative to the
 | NVFP4 batched GEMV | `kernel-nvfp4-gemv` | Author reports a 22.392 µs final aggregate after a multi-step tuning sequence | Memory access, PTX, cache policy, instruction-level parallelism |
 | FP8 block-scale GEMM | `kernel-fp8-block-scale-gemm` | — | 1×128 / 128×128 block scaling scheme |
 | Fused MoE | `kernel-fused-moe` | — | Gate-up fused with SwiGLU; FP8 block scale routing |
+| SM120 blockscaled GEMM/MoE | `kernel-sm120-blockscaled-gemm-moe` | 0.069 ms FP4 GEMM example on RTX PRO 6000 | SM120 CUTLASS/b12x, small-M scheduling, SM12x MoE backend selection |
 | Gated Dual GEMM | `kernel-gated-dual-gemm` | — | Gate × Up → SiLU fused in epilogue |
 | Grouped GEMM for MoE | `kernel-grouped-gemm` | — | Variable-sized expert GEMMs in one launch |
 | FlashMLA | `kernel-flashmla` | DeepSeek V3 decode | MLA-specific TMA + tcgen05 layout |
@@ -78,6 +93,7 @@ All page IDs below resolve via `get_page.py <id>`. All paths are relative to the
 | Last wave underutilizes GPU | `pattern-tail-effect` | CLC, persistent kernels, tile-M/N aspect tuning |
 | Pipeline stalls | `pattern-pipeline-stalls` | Deeper pipeline stages, mbarrier phase management |
 | MoE expert load imbalance | `pattern-moe-load-imbalance` | Grouped GEMM, dynamic routing, overflow spill |
+| SM120 compile/runtime failure | `pattern-sm120-porting-failures` | SM100-to-SM120 migration, target suffix checks, tile/smem retuning |
 
 ---
 
@@ -98,6 +114,7 @@ All page IDs below resolve via `get_page.py <id>`. All paths are relative to the
 |---|---|
 | `migration-wgmma-to-tcgen05` | wgmma (Hopper) → tcgen05 (Blackwell); CTA-scope vs cluster-scope MMA; descriptor changes. |
 | `migration-register-to-tmem` | Register accumulator (Hopper) → TMEM (Blackwell); epilogue restructuring required. |
+| `migration-sm100-to-sm120` | SM100/B200 -> SM120/RTX Blackwell; prevents tcgen05/TMEM assumptions from leaking into SM120 tasks. |
 
 ---
 
@@ -147,6 +164,8 @@ When the user types one of these, match to the canonical term shown:
 | Blackwell | `blackwell` family |
 | B200, GB200, SM100 | `sm100` |
 | B300, GB300, SM103 | `sm103` |
+| RTX Blackwell, RTX PRO 6000 Blackwell, GeForce RTX 50, RTX 5090, RTX 5080, SM120 | `sm120` |
+| GB10, DGX Spark, SM121 | `sm121` |
 | Hopper, H100, H200, H800, SM90 | `sm90` |
 | MoE, mixture of experts, expert parallelism | `moe` |
 | MLA, multi-head latent attention | `mla` |
